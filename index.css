@@ -1,0 +1,65 @@
+
+.container {
+    position: relative;
+}
+
+.container img {
+    width:100%;
+    height: auto;
+}
+
+.container .minus {
+    position: absolute;
+    top: 71%;
+    left: 43.5%;
+    background-color: Transparent;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width:6%;
+}
+.container .plus {
+    position: absolute;
+    top: 71%;
+    left: 51%;
+    background-color: Transparent;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width:6%;
+}
+.container .vibrate {
+    position: absolute;
+    top: 61%;
+    left: 43.3%;
+    background-color: Transparent;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width:6%;
+}
+.container .shock {
+    position: absolute;
+    top: 61%;
+    left: 51.5%;
+    background-color: Transparent;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width:6%;
+}
+
+.container .alice {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    background-color: Transparent;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width:30%;
+}
+.container .title {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    background-color: Transparent;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width:70%;
+}
