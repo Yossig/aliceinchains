@@ -1,16 +1,24 @@
 <html>
-    <head>
-        <link type="text/css" rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="container">
-                <img src="alice.png" class="alice">
-                <img src="title.png" class="title">        
-                <img src="controller.png" class="controller">
-                <input type="image" src="buttons/minus.png" class="minus">
-                <input type="image" src="buttons/plus.png" class="plus">
-                <input type="image" src="buttons/vibrate.png" class="vibrate">
-                <input type="image" src="buttons/shock.png" class="shock">
-        </div>
-    </body>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <img src="alice.png" class="alice">
+        <img src="title.png" class="title">
+        <img src="controller.png" class="controller">
+        <input type="image" src="buttons/minus.png" class="minus" onclick="changeLevel(-1)">
+        <input type="image" src="buttons/plus.png" class="plus" onclick="changeLevel(1)">
+        <input type="image" src="buttons/vibrate.png" class="vibrate" onclick="vibrateAction()">
+        <input type="image" src="buttons/shock.png" class="shock" onclick="shockAction()">
+        <label class=shock-level></label>
+
+    </div>
+</body>
+
 </html>

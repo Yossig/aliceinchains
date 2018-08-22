@@ -63,3 +63,19 @@
     -ms-transform: translate(-50%, -50%);
     width:70%;
 }
+
+.container .shock-level {
+    position: absolute;
+    top: 47%;
+    left: 48%;
+    background-color: Transparent;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-family: 'digital-clock-font';
+    font-size: 6vw;
+}
+
+@font-face{
+    font-family: 'digital-clock-font';
+    src: url(fonts/digital-7.ttf);
+}
