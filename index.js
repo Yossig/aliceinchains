@@ -22,13 +22,6 @@ function vibrateAction(){
 }
 
 function postAction(action) {
-    /*$.post("http://192.168.0.14:1234/postAction", 
-    {
-        action:action
-    })
-    .fail(function() {
-        alert("Could'nt connect to server");
-    })*/
     $.ajax({
         type:"POST",
         url: "http://192.168.0.14:1234/postAction",
