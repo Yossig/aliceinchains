@@ -41,11 +41,8 @@ app.post('/vibrate', (req,res) => {
 })
 
 function invokeRaspberriGPIO(code) {
-    console.log(code);
     pythonShell.run('sender.py',{args: [code,"-t 2","-p 512"],scriptPath: scriptPath, pythonPath: pythonPath}, (err,result) => {
         if(err) throw err;
-
-        console.log(result);
     })
 }
 
