@@ -1,5 +1,5 @@
 let shockLevel = 1;
-const url = "http://192.168.43.240:1234"; 
+const url = "http://192.168.1.13:1234"; 
 
 function changeLevel(direction) {
     var validate = direction + shockLevel;

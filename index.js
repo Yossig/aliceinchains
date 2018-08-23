@@ -20,6 +20,8 @@ const RF_CODES = {
     shock_15: 1116343000,
     shock_16: 1116404424
 }
+const scriptPath = __dirname+'/python_scripts';
+const pythonPath = '/usr/bin/python3';
 
 app.use(express.static(__dirname + '/'));
 app.use(express.urlencoded());
@@ -40,7 +42,7 @@ app.post('/vibrate', (req,res) => {
 
 function invokeRaspberriGPIO(code) {
     console.log(code);
-    pythonShell.run(__dirname+'/python_scripts/sender.py',{args:[code,"-t 2","-p 512"]}, (err,result) => {
+    pythonShell.run('sender.py',{args: [code,"-t 2","-p 512"],scriptPath: scriptPath, pythonPath: pythonPath}, (err,result) => {
         if(err) throw err;
 
         console.log(result);
