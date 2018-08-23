@@ -1,8 +1,9 @@
-var shockLevel = 1;
+let shockLevel = 1;
+const url = "http://192.168.43.240:1234"; 
 
 function changeLevel(direction) {
     var validate = direction + shockLevel;
-    if(!(validate > 14 || validate < 1)) {
+    if(!(validate > 16 || validate < 1)) {
         shockLevel += direction;
     }
 
@@ -25,7 +26,7 @@ function postAction(data,action) {
     console.log(action);
     $.ajax({
         type:"POST",
-        url: "http://192.168.43.240:1234/"+action+"Action",
+        url: url+"/"+action,
         data: data,
         error: function(){
             alert("Could'nt connect to server")

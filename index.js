@@ -2,21 +2,23 @@ const express = require('express');
 const app = express();
 const pythonShell = require('python-shell');
 const RF_CODES = {
-    vibrate : 1,
-    shock_1 : 2,
-    shock_2 : 3,
-    shock_3 : 4,
-    shock_4 : 5,
-    shock_5: 6,
-    shock_6: 7,
-    shock_7: 8,
-    shock_8: 9,
-    shock_9: 10,
-    shock_10: 11,
-    shock_11: 12,
-    shock_12: 13,
-    shock_13: 14,
-    shock_14: 15
+    vibrate : 1116386948,
+    shock_1 : 1116400312,
+    shock_2 : 1116396200,
+    shock_3 : 1116392088,
+    shock_4 : 1116387976,
+    shock_5: 1116383864,
+    shock_6: 1116379752,
+    shock_7: 1116375640,
+    shock_8: 1116371528,
+    shock_9: 1116367416,
+    shock_10: 1116363304,
+    shock_11: 1116359192,
+    shock_12: 1116355080,
+    shock_13: 1116351224,
+    shock_14: 1116347112,
+    shock_15: 1116343000,
+    shock_16: 1116404424
 }
 
 app.use(express.static(__dirname + '/'));
@@ -24,13 +26,13 @@ app.use(express.urlencoded());
 app.get('/',(req,res) => res.sendFile(__dirname+'/index.html'));
 app.listen(1234,() => console.log('Server started, Listening on port 1234'));
 
-app.post('/shockAction', (req,res) => {
+app.post('/shock', (req,res) => {
     console.log(req.body);
     invokeRaspberriGPIO(RF_CODES["shock_"+req.body.level]);
     res.sendStatus(200);
 })
 
-app.post('/vibrateAction', (req,res) => {
+app.post('/vibrate', (req,res) => {
     console.log(req.body);
     invokeRaspberriGPIO(RF_CODES.vibrate);
     res.sendStatus(200);
