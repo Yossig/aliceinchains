@@ -16,6 +16,10 @@ function updateView() {
 
 function shockAction(){
     postAction(JSON.parse('{"action":"shock", "level":'+shockLevel+'}'),"shock");
+    $(".alice").attr("src","images/alice_shocked.png");
+    setTimeout(function() {
+        $(".alice").attr("src","images/alice.png");
+    },500);
 }
 
 function vibrateAction(){
@@ -29,7 +33,7 @@ function postAction(data,action) {
         url: url+"/"+action,
         data: data,
         error: function(){
-            alert("Could'nt connect to server")
+            alert("Could'nt connect to server");
         },
         timeout: 3000
     })
